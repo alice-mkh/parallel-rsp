@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <cstdarg>
 
-#include "m64p_plugin.h"
+#include <mupen64plus/m64p_plugin.h>
 #include "rsp_1.1.h"
 
 #define RSP_PARALLEL_VERSION 0x0101

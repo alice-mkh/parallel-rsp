@@ -6,7 +6,6 @@ project(parallel-rsp LANGUAGES CXX C)
 
 set(NAME_PLUGIN_M64P "mupen64plus-rsp-parallel")
 
-include_directories(../mupen64plus-core/src/api)
 add_definitions(-DM64P_PLUGIN_API)
 add_definitions(-DPARALLEL_INTEGRATION)
 
@@ -76,6 +75,9 @@ target_include_directories(${NAME_PLUGIN_M64P} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR
 target_include_directories(${NAME_PLUGIN_M64P} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/arch/simd/rsp)
 target_include_directories(${NAME_PLUGIN_M64P} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/api)
 target_compile_options(${NAME_PLUGIN_M64P} PRIVATE ${PARALLEL_RSP_CXX_FLAGS})
+
+include(GNUInstallDirs)
+install(TARGETS ${NAME_PLUGIN_M64P} LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}/mupen64plus")
 
 option(PARALLEL_RSP_BAKED_LIGHTNING "Use built-in Lightning." ON)
 

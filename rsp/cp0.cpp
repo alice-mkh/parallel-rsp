@@ -2,7 +2,7 @@
 
 #ifdef PARALLEL_INTEGRATION
 #include "../rsp_1.1.h"
-#include "m64p_plugin.h"
+#include <mupen64plus/m64p_plugin.h>
 namespace RSP
 {
 extern RSP_INFO rsp;
